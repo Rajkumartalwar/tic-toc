@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  nakama:
+    image: heroiclabs/nakama:latest
+    ports:
+      - "7350:7350"
+      - "7351:7351"
+    volumes:
+      - ./modules:/nakama/data/modules
+      - ./local.yml:/nakama/data/local.yml
